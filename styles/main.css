@@ -1,0 +1,231 @@
+/* Estilo global para el cuerpo y fondo */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Estilos del encabezado */
+header {
+    background: rgba(0, 0, 0, 0.744);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.logo {
+    height: 140px;
+    margin-right: 25px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navegación */
+nav {
+    background-color: rgb(0, 0, 0); /* Fondo negro semitransparente */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la visibilidad */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.764); /* Fondo negro semitransparente para el submenu */
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul li .submenu li {
+    margin: 0;
+}
+
+nav ul li .submenu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+nav ul li .submenu li a:hover {
+    background: rgba(255, 255, 255, 0.308);
+}
+
+
+/* Contenido principal */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.759);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+/* Clases para manejar la visibilidad de las secciones */
+.seccion {
+    display: none;
+}
+
+.seccion.visible {
+    display: block;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+/* Formulario */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.067);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.719);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9a9a9a;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #020202;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    input, select, button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

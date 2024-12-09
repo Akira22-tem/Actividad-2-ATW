@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicación Web Interactiva</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <!-- Contenido del encabezado: música de fondo, logo, título y menú de navegación -->
+  <audio id="backgroundMusic" src="LOUCA ENCUBADA (Brazilian Funk + Phonk) DJ SAMIR, RODRECCI.mp3" autoplay loop></audio>
+  <header>
+    <div class="header-container">
+      <img src="kbg.png" alt="Logo KBG" class="logo">
+      <h1>APLICACION INTERACTIVA</h1>
+    </div>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <ul>
+      <li><a href="#" data-section="inicio">Inicio</a></li>
+      <li><a href="#" data-section="funcionalidades">Funcionalidades</a></li>
+      <li><a href="#" data-section="registro">Registro</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección Inicio -->
+  <section id="inicio" class="seccion visible">
+    <h1>Inicio</h1>
+    <p>Nombre: Kevin Israel Yugla Suntaxi</p>
+    <p>Correo: kiyugla@espe.edu.ec</p>
+    <p>Curso: Aplicacion Tecnologias Web NRC </p>
+  </section>
+
+  <!-- Sección Funcionalidades -->
+  <section id="funcionalidades" class="seccion">
+    <h1>Funcionalidades</h1>
+    <div>
+      <h2>Comparar Números</h2>
+      <input type="number" id="num1" placeholder="Número 1">
+      <input type="number" id="num2" placeholder="Número 2">
+      <button id="compararBtn">Comparar</button>
+      <div id="resultado"></div>
+    </div>
+    <div>
+      <h2>Mes del Año</h2>
+      <input type="number" id="mesInput" placeholder="Número del 1 al 12">
+      <button id="mesBtn">Mostrar Mes</button>
+    </div>
+    <div>
+      <h2>Gestión de Nombres</h2>
+      <input type="text" id="nombreInput" placeholder="Ingrese un nombre">
+      <button id="agregarBtn">Agregar</button>
+      <div id="listaNombres"></div>
+    </div>
+  </section>
+
+  <!-- Sección Registro -->
+  <section id="registro" class="seccion">
+    <h1>Registro de Usuarios</h1>
+    <form id="registroForm">
+      <label for="id">ID:</label>
+      <input type="text" id="id" required>
+      <label for="cedula">Cédula:</label>
+      <input type="text" id="cedula" required>
+      <label for="nombre">Nombre Completo:</label>
+      <input type="text" id="nombre" required>
+      <label for="fecha">Fecha de Nacimiento:</label>
+      <input type="date" id="fecha" required>
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad">
+        <option value="Ciudad1">Quito</option>
+        <option value="Ciudad2">Guayaquil</option>
+        <option value="Ciudad3">Cuenca</option>
+        <option value="Ciudad4">Ambato</option>
+        <option value="Ciudad5">Conocoto</option>
+      </select>
+      <button type="submit">Registrar</button>
+    </form>
+    <table id="tablaUsuarios"></table>
+  </section>
+
+  <script src="scripts/main.js"></script>
+
+  <footer>
+    <p>Aplicación desarrollada por AKIRA</p>
+  </footer>
+</body>
+</html>
